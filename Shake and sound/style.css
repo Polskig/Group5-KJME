@@ -1,0 +1,13 @@
+body{
+    background: red;
+}
+
+.container {
+    display: flex;
+}
+.one {
+    flex: 0 0 35%;
+}
+.two {
+    flex: 1;
+}
