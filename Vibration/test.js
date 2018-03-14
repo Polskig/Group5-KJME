@@ -22,3 +22,6 @@ function example2() {
     // length of zero.
     navigator.vibrate(0);
   }
+
+  document.getElementById("myBtn").addEventListener("click", function(){
+    document.getElementById("demo").innerHTML = "Hello World";
