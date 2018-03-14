@@ -23,5 +23,6 @@ function example2() {
     navigator.vibrate(0);
   }
 
-  document.getElementById("myBtn").addEventListener("click", function(){
+  /*document.getElementById("redpic").addEventListener("click", function(){
     document.getElementById("demo").innerHTML = "Hello World";
+  }*/
