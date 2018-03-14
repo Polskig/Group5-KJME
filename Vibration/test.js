@@ -1,3 +1,18 @@
+/*//canvas
+
+var grabCan = document.querySelector("Canvas");
+var can = grabCan.getContext ("2d"); //decides 2d or 3d
+
+//sky color and box
+can.beginPath();
+can.fillStyle = "#00bfff";
+can.fillRect(0,0,750,300)
+
+//water color and box
+can.beginPath();
+can.fillStyle = "green";
+can.fillRect(0,300,750,300);*/
+
 /*function example1() {
    Vibrate for 500ms
   navigator.vibrate([500]);
