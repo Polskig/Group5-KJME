@@ -1,0 +1,45 @@
+<!doctype HTML>
+
+<!-- In this example we us text and a custom object to create a overlay. 
+  The overaly is animated to create a warning message that flashes-->
+<html>
+<head>
+
+  <!--grabbing the required libraries-->
+  <script src="/demo/public/build/aframe.js"></script>
+  <script src="/demo/public/build/aframe-ar.js"></script>
+  <script src="/demo/public/src/model-opacity.js"></script> <!--We need this library now for the opacity-->
+
+</head>
+
+<!-- defining the body-->
+<body style='margin : 0px; overflow: hidden;'>
+
+  <!--creating a scene that will contain our entities, markers images, text and camera. 
+    The scene can be given attributes. Here we have added the height, width and turned on anti-aliasing-->
+  <a-scene embedded artoolkit='sourceType: webcam; sourceWidth: 240; sourceHeight: 180;' antialias="true" outline> 
+
+    <!--here is our marker tag. we define the url, which in this case is just the name of the png, because it is in the same folder.-->
+    <a-marker type='pattern' url='1.patt'>
+
+      <!--Here we add the object and define some simple attributes-->
+      <a-entity id="marker2" material="color: navy" obj-model="obj: url(warn_box.obj)" rotation="0 -90 0" position="-2.5 -1 -4" scale="1 1 1" opacity="1">
+
+
+      <!--here we have our two text tags. The thing to keep in mind here is to adjust the position and rotation to match up with our image.-->
+      <a-text value="If you want to live, under no circumstances press this switch!
+          Upon activation of this switch you will disintegrate immediatly.
+          This switch will end your existance!" rotation="-90 0 0" position="-2.5 1 -2"></a-text>
+      
+
+    </a-marker>
+    <!-- This is perhaps the most important part. Without adding the camera we can't project the augmented image to our marker.
+      The camera can also be adjusted via attributes like position and rotation and others, that can be found in the aframe inspector within the browser by
+      pressing ctrl+alt+i -->
+    <a-entity camera></a-entity>
+
+  </a-scene>
+
+</body>
+
+</html>
