@@ -4,8 +4,24 @@
 #roomBooked {
   display: none;
 }
-
-
+#niagara8 {
+  display: none;
+}
+#niagara10 {
+  display: none;
+}
+#niagara13 {
+  display: table;
+}
+#niagara15 {
+  display: none;
+}
+#niagara17 {
+  display: none;
+}
+#niagaratime {
+  display: none;
+}
 h1 {
   color: Black;
 }
@@ -42,7 +58,7 @@ button {
 }
 
 #building {
-  height: 100px;
+  height: 45px;
   background-color: #0000FF;
   border-top: 10px solid #dee2e6;
   border-bottom: 5px solid #dee2e6;
@@ -52,8 +68,6 @@ button {
   text-align: center;
   vertical-align: middle;
 }
-
-
 
 .btn-nav {
   color: #fff;
@@ -178,7 +192,13 @@ button {
           clip-path: none;
 }
 
-
+#schedule {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+  
 .table {
   width: 100%;
   max-width: 100%;
