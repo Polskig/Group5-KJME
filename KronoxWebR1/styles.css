@@ -1,0 +1,425 @@
+#hidden {
+  display: none;
+}
+#roomBooked {
+  display: none;
+}
+
+
+h1 {
+  color: Black;
+}
+p.loginp {
+  font-size: 20px;
+  font-weight: bold;
+}
+a {
+    text-decoration:none;
+}
+
+
+button {
+  border-radius: 0;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: normal;
+  vertical-align: middle;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.spacer {
+  height: 20px;
+}
+
+#building {
+  height: 100px;
+  background-color: #0000FF;
+  border-top: 10px solid #dee2e6;
+  border-bottom: 5px solid #dee2e6;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+
+.btn-nav {
+  color: #fff;
+  background-color: #373a3c;
+  border-bottom: 0px;
+  border-top: 0px;
+}
+
+.btn-nav:hover {
+  color: #fff;
+  background-color: #0000FF;
+  cursor: pointer;
+}
+
+.btn-nav-sel {
+  color: #fff;
+  background-color: #0000FF;
+  border-bottom: 0px;
+  border-top: 0px;
+}
+
+.btn-green {
+  color: #fff;
+  background-color: #3FB618;
+  border: 3px solid white;
+  border-radius: 1em;
+}
+
+.btn-green:hover {
+  color: #fff;
+  background-color: #339414;
+  cursor: pointer;
+}
+
+.btn-timegreen {
+  color: #fff;
+  background-color: #006400;
+  border: 3px solid white;
+  border-radius: 1em;
+}
+
+.btn-timegreen:hover {
+  color: #fff;
+  background-color: #006450;
+  cursor: pointer;
+}
+
+.btn-red {
+  color: #fff;
+  background-color: #FF0039;
+  border-radius: 1em;
+  border: 3px solid white;
+}
+
+.btn-red:hover {
+  color: #fff;
+  background-color: #d90030;
+  cursor: pointer;
+}
+
+.btn-timered {
+  color: #fff;
+  background-color: #8B0000;
+  border: 3px solid white;
+  border-radius: 1em;
+}
+
+.btn-timered:hover {
+  color: #fff;
+  background-color: #8B0050;
+  cursor: pointer;
+}
+
+.btn-book {
+  color: #fff;
+  background-color: #3FB618;
+  border: 1px solid white;
+}
+
+.navbar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #373a3c;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  padding: 0.5rem 1rem;
+}
+
+#location {
+  border-bottom: 2px solid #dee2e6;
+}
+
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  border: 0;
+}
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  -webkit-clip-path: none;
+          clip-path: none;
+}
+
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #dee2e6;
+}
+
+.table .table {
+  background-color: #fff;
+}
+
+.table-sm th,
+.table-sm td {
+  padding: 0.3rem;
+}
+
+.table-bordered {
+  border: 1px solid #dee2e6;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #dee2e6;
+}
+
+.table-bordered thead th,
+.table-bordered thead td {
+  border-bottom-width: 2px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-primary,
+.table-primary > th,
+.table-primary > td {
+  background-color: #c3dbf7;
+}
+
+.table-hover .table-primary:hover {
+  background-color: #adcef4;
+}
+
+.table-hover .table-primary:hover > td,
+.table-hover .table-primary:hover > th {
+  background-color: #adcef4;
+}
+
+.table-secondary,
+.table-secondary > th,
+.table-secondary > td {
+  background-color: #c7c8c8;
+}
+
+.table-hover .table-secondary:hover {
+  background-color: #babbbb;
+}
+
+.table-hover .table-secondary:hover > td,
+.table-hover .table-secondary:hover > th {
+  background-color: #babbbb;
+}
+
+.table-success,
+.table-success > th,
+.table-success > td {
+  background-color: #c9ebbe;
+}
+
+.table-hover .table-success:hover {
+  background-color: #b9e5ab;
+}
+
+.table-hover .table-success:hover > td,
+.table-hover .table-success:hover > th {
+  background-color: #b9e5ab;
+}
+
+.table-info,
+.table-info > th,
+.table-info > td {
+  background-color: #e2cfec;
+}
+
+.table-hover .table-info:hover {
+  background-color: #d7bde5;
+}
+
+.table-hover .table-info:hover > td,
+.table-hover .table-info:hover > th {
+  background-color: #d7bde5;
+}
+
+.table-warning,
+.table-warning > th,
+.table-warning > td {
+  background-color: #ffd8be;
+}
+
+.table-hover .table-warning:hover {
+  background-color: #ffc9a5;
+}
+
+.table-hover .table-warning:hover > td,
+.table-hover .table-warning:hover > th {
+  background-color: #ffc9a5;
+}
+
+.table-danger,
+.table-danger > th,
+.table-danger > td {
+  background-color: #ffb8c8;
+}
+
+.table-hover .table-danger:hover {
+  background-color: #ff9fb4;
+}
+
+.table-hover .table-danger:hover > td,
+.table-hover .table-danger:hover > th {
+  background-color: #ff9fb4;
+}
+
+.table-light,
+.table-light > th,
+.table-light > td {
+  background-color: #fdfdfe;
+}
+
+.table-hover .table-light:hover {
+  background-color: #ececf6;
+}
+
+.table-hover .table-light:hover > td,
+.table-hover .table-light:hover > th {
+  background-color: #ececf6;
+}
+
+.table-dark,
+.table-dark > th,
+.table-dark > td {
+  background-color: #c7c8c8;
+}
+
+.table-hover .table-dark:hover {
+  background-color: #babbbb;
+}
+
+.table-hover .table-dark:hover > td,
+.table-hover .table-dark:hover > th {
+  background-color: #babbbb;
+}
+
+.table-active,
+.table-active > th,
+.table-active > td {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-hover .table-active:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-hover .table-active:hover > td,
+.table-hover .table-active:hover > th {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table .thead-dark th {
+  color: #fff;
+  background-color: #212529;
+  border-color: #32383e;
+}
+
+.table .thead-light th {
+  color: #495057;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.table-dark {
+  color: #fff;
+  background-color: #212529;
+}
+
+.table-dark th,
+.table-dark td,
+.table-dark thead th {
+  border-color: #32383e;
+}
+
+.table-dark.table-bordered {
+  border: 0;
+}
+
+.table-dark.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.table-dark.table-hover tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.075);
+}
+
+
+
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.table-responsive > .table-bordered {
+  border: 0;
+}
+
+#logintext {
+  padding-top:5%;
+  padding-left:40%;
+}
+
