@@ -5,6 +5,12 @@
 #BNIA305 {
   display: block;
 }
+#NI13r {
+  display: none;
+}
+#NI13 {
+  display: inline;
+}
   #roomBooked {
     display: none;
   }
@@ -428,6 +434,9 @@
   .table-dark.table-hover tbody tr:hover {
     background-color: rgba(255, 255, 255, 0.075);
   }
+
+
+
 
   .table-responsive {
     display: block;
