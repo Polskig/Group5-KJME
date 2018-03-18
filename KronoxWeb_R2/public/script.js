@@ -98,10 +98,13 @@ function updatePage() {
 console.log("username submitted");
 var roomBooked = document.getElementById('roomBooked').innerHTML;
 document.getElementById('BNIA305').innerHTML = "Unavailable";
-alert("You have booked NI:A0305 from 13:15-15:00");
 document.getElementById("NIA305a").style.backgroundColor = "#ffb8c8";
 document.getElementById("NIA305b").style.backgroundColor = "#ffb8c8";
 
+}
+
+function sendAlert() {
+  alert("You have booked NI:A0305 from 13:15-15:00");
 }
 
 
@@ -152,6 +155,6 @@ function send(str) {
 }
 
 function logReceived(d) {
-  var leftRed = updatePage();
-  document.getElementById('NIA305b').innerHTML = d + '<br />' + leftRed;
+  updatePage();
+  document.getElementById('NIA305b').innerHTML = d;
 }
