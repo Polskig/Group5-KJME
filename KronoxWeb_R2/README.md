@@ -1,4 +1,10 @@
-# Setup 
+# Round 1
+
+The first round web prototype can be found here:
+
+glitch.com/edit/#!/smooth-eye
+
+# Round 2 Setup 
 
 Install node
 
