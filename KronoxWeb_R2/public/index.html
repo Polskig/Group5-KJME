@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>websockets-skeleton</title>
+  <title>Kronox Room Scheduler</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -236,8 +236,8 @@
         <td id="NIA305b"> <p id="BNIA305"><button type="button" class="btn btn-book" onclick="doButton()">Reserve this room</button></p>
           <div id="hidden">
             <form id="sendForm">
-              <input type="text" value="Hello" id="sendThis"></input>
-              <input type="submit" value="Send">
+              <input type="text" value="Enter your student ID" id="sendThis"></input>
+              <input type="submit" value="Send" onclick="sendAlert()">
             </form>
           </div>
         <div id="roomBooked">
