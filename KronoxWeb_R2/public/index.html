@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>websockets-skeleton</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <button type="button" class="btn btn-nav">Schedule</button>
+    <button type="button" class="btn btn-nav">Advanced Search</button>
+    <button type="button" class="btn btn-nav">Schedule Guide A-Ö</button>
+    <button type="button" class="btn btn-nav-sel">Room Booking</button>
+    </nav>
+
+
+        <div class="spacer">
+        </div>
+
+
+    <div id="location" align="left">
+    <button type="button" class="btn btn-green">Niagara</button>
+    <button type="button" class="btn btn-red">Orkanen</button>
+    <button type="button" class="btn btn-red">Health and Society</button>
+    <button type="button" class="btn btn-red">Odontology</button>
+    <button type="button" class="btn btn-green">Gäddan 8</button>
+    <button type="button" class="btn btn-red">Orkanen Library</button>
+    </div>
+
+    <div id="timeButtons">
+    <div align="right">
+    <div id="niagaraTime">
+    <button type="button" class="btn btn-timered" onclick="NI8()">8:15-10:00</button>
+    <button type="button" class="btn btn-timered"  onclick="NI10()">10:15-12:00</button>
+    <button type="button" class="btn btn-timegreen" onclick="NI13()">13:15-15:00</button>
+    <button type="button" class="btn btn-timered" onclick="NI15()">15:15-17:00</button>
+    <button type="button" class="btn btn-timered" onclick="NI17()">17:15-20:00</button>
+    </div>
+    </div>
+    </div>
+
+        <div class="spacer">
+        </div>
+
+        <div id="building">
+          <div id="default"> Niagara 13:15 - 15:00
+          </div>
+        </div>
+
+    <div id="schedule">
+
+
+    <!–– Niagara 8 ––>
+        <table id="niagara8" class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Room (capacity)</th>
+          <th scope="col">Availability</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-danger">
+          <td>NI:A0301 (20)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:A0304 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:A0305 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:A0322 (15)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:A0515 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:A0614 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+         <tr class="table-danger">
+          <td>NI:B0203 (8)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:B0303 (15)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:B0305 (15)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:B0321 (8)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0301 (20)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0305 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0306 (16)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0309 (16)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0312 (16)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0325 (8)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0401 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+      </tbody>
+    </table>
+
+        <!–– Niagara 10 ––>
+        <table id="niagara10" class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Room (capacity)</th>
+          <th scope="col">Availability</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-danger">
+          <td>NI:A0301 (20)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:A0304 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:A0305 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:A0322 (15)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:A0515 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:A0614 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+         <tr class="table-danger">
+          <td>NI:B0203 (8)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:B0303 (15)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:B0305 (15)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:B0321 (8)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0301 (20)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0305 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0306 (16)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0309 (16)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0312 (16)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0325 (8)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0401 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!–– Niagara 13 ––>
+    <table id="sched" class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Room (capacity)</th>
+        <th scope="col">Availability</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-danger">
+        <td>NI:A0301 (20)</td>
+        <td>Unavailable</td>
+      </tr>
+      <tr class="table-danger">
+        <td>NI:A0304 (10)</td>
+        <td>Unavailable</td>
+      </tr>
+      <tr class="table-success">
+        <td id="NIA305a">NI:A0305 (10)</td>
+        <td id="NIA305b"> <p id="BNIA305"><button type="button" class="btn btn-book" onclick="doButton()">Reserve this room</button></p>
+          <div id="hidden">
+            <form id="sendForm">
+              <input type="text" value="Hello" id="sendThis"></input>
+              <input type="submit" value="Send">
+            </form>
+          </div>
+        <div id="roomBooked">
+</div>
+</td>
+
+      </tr>
+      <tr class="table-danger">
+        <td>NI:A0322 (15)</td>
+        <td>Unavailable</td>
+      </tr>
+      <tr class="table-danger">
+        <td>NI:A0515 (10)</td>
+        <td>Unavailable</td>
+      </tr>
+      <tr class="table-danger">
+        <td>NI:A0614 (10)</td>
+        <td>Unavailable</td>
+      </tr>
+       <tr class="table-danger">
+        <td>NI:B0203 (8)</td>
+        <td>Unavailable</td>
+      </tr>
+      <tr class="table-danger">
+        <td>NI:B0303 (15)</td>
+        <td>Unavailable</td>
+      </tr>
+      <tr class="table-danger">
+        <td>NI:B0305 (15)</td>
+        <td>Unavailable</td>
+      </tr>
+      <tr class="table-danger">
+        <td>NI:B0321 (8)</td>
+        <td>Unavailable</td>
+      </tr>
+      <tr class="table-danger">
+        <td>NI:C0301 (20)</td>
+        <td>Unavailable</td>
+      </tr>
+      <tr class="table-danger">
+        <td>NI:C0305 (10)</td>
+        <td>Unavailable</td>
+      </tr>
+      <tr class="table-danger">
+        <td>NI:C0306 (16)</td>
+        <td>Unavailable</td>
+      </tr>
+      <tr class="table-danger">
+        <td>NI:C0309 (16)</td>
+        <td>Unavailable</td>
+      </tr>
+      <tr class="table-danger">
+        <td>NI:C0312 (16)</td>
+        <td>Unavailable</td>
+      </tr>
+      <tr class="table-danger">
+        <td>NI:C0325 (8)</td>
+        <td>Unavailable</td>
+      </tr>
+      <tr class="table-danger">
+        <td>NI:C0401 (10)</td>
+        <td>Unavailable</td>
+      </tr>
+    </tbody>
+  </table>
+
+    <!–– Niagara 15 ––>
+        <table id="niagara15" class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Room (capacity)</th>
+          <th scope="col">Availability</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-danger">
+          <td>NI:A0301 (20)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:A0304 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:A0305 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:A0322 (15)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:A0515 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:A0614 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+         <tr class="table-danger">
+          <td>NI:B0203 (8)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:B0303 (15)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:B0305 (15)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:B0321 (8)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0301 (20)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0305 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0306 (16)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0309 (16)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0312 (16)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0325 (8)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0401 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+      </tbody>
+    </table>
+
+        <!–– Niagara 17 ––>
+        <table id="niagara17" class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Room (capacity)</th>
+          <th scope="col">Availability</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-danger">
+          <td>NI:A0301 (20)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:A0304 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:A0305 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:A0322 (15)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:A0515 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:A0614 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+         <tr class="table-danger">
+          <td>NI:B0203 (8)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:B0303 (15)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:B0305 (15)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:B0321 (8)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0301 (20)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0305 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0306 (16)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0309 (16)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0312 (16)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0325 (8)</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr class="table-danger">
+          <td>NI:C0401 (10)</td>
+          <td>Unavailable</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+         </div>  <!-- end schedule div -->
+
+
+    <script src="lib/reconnecting-websocket.js"></script>
+    <script src="script.js"></script>
+
+  </body>
+</html>
