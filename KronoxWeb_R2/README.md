@@ -21,3 +21,7 @@ Run ngrok
 `$ ngrok http 4000'
 
 (or whichever port npm is running)
+
+# Notes
+
+While the idea is that the user will be able to toggle both buildings and times to see what is available, in this version one can only toggle times within the building Niagara.
