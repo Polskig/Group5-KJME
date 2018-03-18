@@ -107,6 +107,17 @@ function sendAlert() {
   alert("You have booked NI:A0305 from 13:15-15:00");
 }
 
+//update Button
+function red13() {
+  var green13 = document.getElementById('NI13');
+  var red13 = document.getElementById('NI13r');
+  console.log("toggle on");
+     if(green13.style.display == 'inline')
+        red13.style.display = 'none';
+     else
+        green13.style.display = 'none';
+        red13.style.display = 'inline'
+  }
 
 
 
@@ -156,5 +167,6 @@ function send(str) {
 
 function logReceived(d) {
   updatePage();
+  red13();
   document.getElementById('NIA305b').innerHTML = d;
 }
