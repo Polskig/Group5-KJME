@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>Cross-device test Marri</title>
+        <link rel="stylesheet" href="style.css">
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <h1>Testing out this door thingy</h1>
+        
+        <div class="wrapper">
+            <div class="light-indicator" style="display: none">
+                                
+            </div>
+
+            <form id="sendForm">
+                <input type="text" value="Hello" id="sendThis"></input>
+                <input type="submit" value="Send">
+            </form>
+            <div id="sendObject">Change the color!</div>
+        
+            <h2>Received</h2>
+            <div id="lastMsg">(nothing)</div>
+        </div>
+
+        <script src="lib/reconnecting-websocket.js"></script>
+        <script src="script.js"></script>
+    </body>
+
+</html>
