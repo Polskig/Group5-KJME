@@ -9,7 +9,10 @@
   <script src="/QR and AR/build/aframe.js"></script>
   <script src="/QR and AR/build/aframe-ar.js"></script>
   <!--<script src="/demo/public/src/model-opacity.js"></script>--> <!--We need this library now for the opacity-->
-
+  <!-- AFRAME OPACITY EXTENSION -->
+  <script src="/QR and AR/src/model-opacity.js"></script>
+  <!-- HIDES DEFAULT DEBUGGING UI -->
+  <link href="/QR and AR/src/DebugUI-remover.css" rel="stylesheet">
 </head>
 
 <!-- defining the body-->
@@ -20,10 +23,10 @@
   <a-scene embedded artoolkit='sourceType: webcam; sourceWidth: 240; sourceHeight: 180;' antialias="true" outline> 
 
     <!--here is our marker tag. we define the url, which in this case is just the name of the png, because it is in the same folder.-->
-    <a-marker type='pattern' url='/QR and AR/Lib//markers/2.patt'>
+    <a-marker type='pattern' url='/QR and AR/Lib//markers/9.patt'>
 
       <!--Here we add the object and define some simple attributes-->
-    <a-entity id="marker2" material="color: navy" obj-model="obj: url(/QR and AR/Lib/images/background.obj)" rotation="0 0 0" position="0 -1 0" scale="0.1 0.1 0.1" opacity="1"></a-entity>
+    <a-entity id="marker2" material="color: navy" obj-model="obj: url(/QR and AR/Lib/images/background.obj)" rotation="0 0 0" position="0 -1 0" scale="0.3 0.3 0.3" opacity="1"></a-entity>
         <a-text value="OR:B129" position="0 -0.9 0" rotation="-90 0 0"></a-text>
     </a-marker>
     <!-- This is perhaps the most important part. Without adding the camera we can't project the augmented image to our marker.
