@@ -2,7 +2,7 @@
 
 The first round web prototype can be found here:
 
-glitch.com/edit/#!/smooth-eye
+https://kronox.glitch.me/
 
 # Round 2 Setup 
 
