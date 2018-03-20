@@ -14,6 +14,18 @@
 #NI13 {
   display: inline;
 }
+#NIred {
+  display:none;
+}
+#NIgreen {
+  display:inline;
+}
+#GAred {
+  display:none;
+}
+#GAgreen {
+  display:inline;
+}
   #roomBooked {
     display: none;
   }
@@ -437,9 +449,6 @@
   .table-dark.table-hover tbody tr:hover {
     background-color: rgba(255, 255, 255, 0.075);
   }
-
-
-
 
   .table-responsive {
     display: block;
