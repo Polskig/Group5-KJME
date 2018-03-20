@@ -1,33 +1,32 @@
 <!doctype HTML>
 
-<!--This prototype creates an Augmented Reality overlay that's supposed to represent the QR code feature in the 
-Kronox booking system and add the information that people have said they would like to have displayed-->
+<!-- In this example we us text and a custom object to create a overlay. 
+  The overaly is animated to create a warning message that flashes-->
 <html>
 <head>
 
-  <!--Required Libraries-->
+  <!--grabbing the required libraries-->
   <script src="/QR and AR 1/build/aframe.js"></script>
   <script src="/QR and AR 1/build/aframe-ar.js"></script>
-  <!--Enables opacity functionality with objects-->
+  <!--<script src="/demo/public/src/model-opacity.js"></script>--> <!--We need this library now for the opacity-->
+  <!-- AFRAME OPACITY EXTENSION -->
   <script src="/QR and AR 1/src/model-opacity.js"></script>
-  <!--Hiding the default debug UI-->
+  <!-- HIDES DEFAULT DEBUGGING UI -->
   <link href="/QR and AR 1/src/DebugUI-remover.css" rel="stylesheet">
 </head>
 
-<!--Defining the body-->
+<!-- defining the body-->
 <body style='margin : 0px; overflow: hidden;'>
 
-  <!--Creating a scene needed to project entities. 
+  <!--creating a scene that will contain our entities, markers images, text and camera. 
     The scene can be given attributes. Here we have added the height, width and turned on anti-aliasing-->
   <a-scene embedded artoolkit='sourceType: webcam; sourceWidth: 240; sourceHeight: 180;' antialias="true" outline> 
 
-    <!--Adding the marker-->
+    <!--here is our marker tag. we define the url, which in this case is just the name of the png, because it is in the same folder.-->
     <a-marker type='pattern' url='/QR and AR 1/Lib//markers/9.patt'>
 
       <!--Here we add the object and define some simple attributes-->
     <a-entity id="marker2" material="color: blue" obj-model="obj: url(/QR and AR 1/Lib/images/background.obj)" rotation="0 0 0" position="0 -1 0" scale="0.4 0.4 0.4" opacity="1"></a-entity>
-        
-        <!--Adding text and giving attributes-->
         <a-text position="-0.5 -0.7 -2.5" rotation="-90 0 0" color="yellow"
         value="OR:B129"></a-text>
         <a-text position="-1.8 -0.7 -1.6" rotation="-90 0 0" color="red"
@@ -52,9 +51,13 @@ Kronox booking system and add the information that people have said they would l
         value="BOOKED"></a-text>
         <a-text position="-1.8 -0.7 0.6" rotation="-90 0 0" color="orange"
         value="AVAILABLE"></a-text>
+
+        
     </a-marker>
-    <!--Adding the camera and allowing it to move it with wasd-->
-    <a-entity camera look-controls wasd-controls></a-entity>
+    <!-- This is perhaps the most important part. Without adding the camera we can't project the augmented image to our marker.
+      The camera can also be adjusted via attributes like position and rotation and others, that can be found in the aframe inspector within the browser by
+      pressing ctrl+alt+i -->
+    <a-entity camera></a-entity>
 
   </a-scene>
 
