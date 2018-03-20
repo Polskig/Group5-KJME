@@ -9,7 +9,10 @@
   <script src="/QR and AR/build/aframe.js"></script>
   <script src="/QR and AR/build/aframe-ar.js"></script>
   <!--<script src="/demo/public/src/model-opacity.js"></script>--> <!--We need this library now for the opacity-->
-
+  <!-- AFRAME OPACITY EXTENSION -->
+  <script src="/QR and AR/src/model-opacity.js"></script>
+  <!-- HIDES DEFAULT DEBUGGING UI -->
+  <link href="/QR and AR/src/DebugUI-remover.css" rel="stylesheet">
 </head>
 
 <!-- defining the body-->
@@ -20,11 +23,36 @@
   <a-scene embedded artoolkit='sourceType: webcam; sourceWidth: 240; sourceHeight: 180;' antialias="true" outline> 
 
     <!--here is our marker tag. we define the url, which in this case is just the name of the png, because it is in the same folder.-->
-    <a-marker type='pattern' url='/QR and AR/Lib//markers/2.patt'>
+    <a-marker type='pattern' url='/QR and AR/Lib//markers/9.patt'>
 
       <!--Here we add the object and define some simple attributes-->
-    <a-entity id="marker2" material="color: navy" obj-model="obj: url(/QR and AR/Lib/images/background.obj)" rotation="0 0 0" position="0 -1 0" scale="0.1 0.1 0.1" opacity="1"></a-entity>
-        <a-text value="OR:B129" position="0 -0.9 0" rotation="-90 0 0"></a-text>
+    <a-entity id="marker2" material="color: blue" obj-model="obj: url(/QR and AR/Lib/images/background.obj)" rotation="0 0 0" position="0 -1 0" scale="0.4 0.4 0.4" opacity="1"></a-entity>
+        <a-text position="-0.5 -0.7 -2.5" rotation="-90 0 0" color="yellow"
+        value="OR:B129"></a-text>
+        <a-text position="-1.8 -0.7 -1.6" rotation="-90 0 0" color="red"
+        value="16:00 - 17:00"></a-text>
+        <a-text position="-1.8 -0.7 -1.2" rotation="-90 0 0" 
+        value="Education
+        Course Name"></a-text>
+        <a-text position="-1.8 -0.7 -0.5" rotation="-90 0 0" color="red"
+        value="17:00 - 18:00"></a-text>
+        <a-text position="-1.8 -0.7 -0.1" rotation="-90 0 0" 
+        value="Education
+        Course Name"></a-text>
+        <a-text position="-1.8 -0.7 0.9" rotation="-90 0 0"
+        value="Next available booking"></a-text>
+        <a-text position="-1.8 -0.7 1.2" rotation="-90 0 0" color="red"
+        value="18:00"></a-text>
+        <a-text position="-1.8 -0.7 1.5" rotation="-90 0 0" 
+        value="Nearest available room"></a-text>
+        <a-text position="-1.8 -0.7 1.8" rotation="-90 0 0" color="yellow"
+        value="OR:B236"></a-text>
+        <a-text position="-1.8 -0.7 -2" rotation="-90 0 0" color="orange"
+        value="BOOKED"></a-text>
+        <a-text position="-1.8 -0.7 0.6" rotation="-90 0 0" color="orange"
+        value="AVAILABLE"></a-text>
+
+        
     </a-marker>
     <!-- This is perhaps the most important part. Without adding the camera we can't project the augmented image to our marker.
       The camera can also be adjusted via attributes like position and rotation and others, that can be found in the aframe inspector within the browser by
