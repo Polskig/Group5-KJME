@@ -6,13 +6,13 @@
 <head>
 
   <!--grabbing the required libraries-->
-  <script src="/QR and AR/build/aframe.js"></script>
-  <script src="/QR and AR/build/aframe-ar.js"></script>
+  <script src="/QR and AR 1/build/aframe.js"></script>
+  <script src="/QR and AR 1/build/aframe-ar.js"></script>
   <!--<script src="/demo/public/src/model-opacity.js"></script>--> <!--We need this library now for the opacity-->
   <!-- AFRAME OPACITY EXTENSION -->
-  <script src="/QR and AR/src/model-opacity.js"></script>
+  <script src="/QR and AR 1/src/model-opacity.js"></script>
   <!-- HIDES DEFAULT DEBUGGING UI -->
-  <link href="/QR and AR/src/DebugUI-remover.css" rel="stylesheet">
+  <link href="/QR and AR 1/src/DebugUI-remover.css" rel="stylesheet">
 </head>
 
 <!-- defining the body-->
@@ -23,10 +23,10 @@
   <a-scene embedded artoolkit='sourceType: webcam; sourceWidth: 240; sourceHeight: 180;' antialias="true" outline> 
 
     <!--here is our marker tag. we define the url, which in this case is just the name of the png, because it is in the same folder.-->
-    <a-marker type='pattern' url='/QR and AR/Lib//markers/9.patt'>
+    <a-marker type='pattern' url='/QR and AR 1/Lib//markers/9.patt'>
 
       <!--Here we add the object and define some simple attributes-->
-    <a-entity id="marker2" material="color: blue" obj-model="obj: url(/QR and AR/Lib/images/background.obj)" rotation="0 0 0" position="0 -1 0" scale="0.4 0.4 0.4" opacity="1"></a-entity>
+    <a-entity id="marker2" material="color: blue" obj-model="obj: url(/QR and AR 1/Lib/images/background.obj)" rotation="0 0 0" position="0 -1 0" scale="0.4 0.4 0.4" opacity="1"></a-entity>
         <a-text position="-0.5 -0.7 -2.5" rotation="-90 0 0" color="yellow"
         value="OR:B129"></a-text>
         <a-text position="-1.8 -0.7 -1.6" rotation="-90 0 0" color="red"
