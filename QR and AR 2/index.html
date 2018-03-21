@@ -1,33 +1,34 @@
 <!doctype HTML>
 
-<!-- In this example we us text and a custom object to create a overlay. 
-  The overaly is animated to create a warning message that flashes-->
+<!--This prototype creates an Augmented Reality overlay that's supposed to represent the QR code feature in the 
+Kronox booking system and add the information that people have said they would like to have displayed-->
 <html>
 <head>
 
-  <!--grabbing the required libraries-->
+  <!--Required Libraries-->
   <script src="/QR and AR 1/build/aframe.js"></script>
   <script src="/QR and AR 1/build/aframe-ar.js"></script>
-  <!--<script src="/demo/public/src/model-opacity.js"></script>--> <!--We need this library now for the opacity-->
-  <!-- AFRAME OPACITY EXTENSION -->
+  <!--Enables opacity functionality with objects-->
   <script src="/QR and AR 1/src/model-opacity.js"></script>
-  <!-- HIDES DEFAULT DEBUGGING UI -->
+  <!--Hiding the default debug UI-->
   <link href="/QR and AR 1/src/DebugUI-remover.css" rel="stylesheet">
 </head>
 
-<!-- defining the body-->
+<!--Defining the body-->
 <body style='margin : 0px; overflow: hidden;'>
 
-  <!--creating a scene that will contain our entities, markers images, text and camera. 
+  <!--Creating a scene needed to project entities. 
     The scene can be given attributes. Here we have added the height, width and turned on anti-aliasing-->
   <a-scene embedded artoolkit='sourceType: webcam; sourceWidth: 240; sourceHeight: 180;' antialias="true" outline> 
 
-    <!--here is our marker tag. we define the url, which in this case is just the name of the png, because it is in the same folder.-->
+    <!--Adding the marker-->
     <a-marker type='pattern' url='/QR and AR 1/Lib//markers/9.patt'>
 
       <!--Here we add the object and define some simple attributes-->
-    <a-entity id="marker2" material="color: blue" obj-model="obj: url(/QR and AR 1/Lib/images/background.obj)" rotation="0 0 0" position="0 -1 0" scale="0.4 0.4 0.4" opacity="1"></a-entity>
-        <a-text position="-0.5 -0.7 -2.5" rotation="-90 0 0" color="yellow"
+    <a-entity id="marker2" material="color: #273455" obj-model="obj: url(/QR and AR 1/Lib/images/background.obj)" rotation="0 0 0" position="0 -1 0" scale="0.4 0.4 0.4" opacity="1"></a-entity>
+    <a-entity id="marker2" material="color: #72BA3A" obj-model="obj: url(/QR and AR 1/Lib/images/available.obj)" rotation="0 0 0" position="-0.9 0 -2" scale="1.2 1.2 1.2" opacity="1"></a-entity>    
+        <!--Adding text and giving attributes-->
+        <a-text position="-0.9 -0.7 -2.5" rotation="-90 0 0" color="yellow" scale="1.5 1.5 1.5"
         value="OR:B129"></a-text>
         <a-text position="-1.8 -0.7 -1.6" rotation="-90 0 0" color="red"
         value="16:00 - 17:00"></a-text>
@@ -47,17 +48,13 @@
         value="Nearest available room"></a-text>
         <a-text position="-1.8 -0.7 1.8" rotation="-90 0 0" color="yellow"
         value="OR:B236"></a-text>
-        <a-text position="-1.8 -0.7 -2" rotation="-90 0 0" color="orange"
-        value="BOOKED"></a-text>
+        <!--<a-text position="-0.9 -0.7 -2" rotation="-90 0 0" color="#72BA3A" scale="1.2 1.2 1.2"
+        value="AVAILABLE"></a-text>-->
         <a-text position="-1.8 -0.7 0.6" rotation="-90 0 0" color="orange"
         value="AVAILABLE"></a-text>
-
-        
     </a-marker>
-    <!-- This is perhaps the most important part. Without adding the camera we can't project the augmented image to our marker.
-      The camera can also be adjusted via attributes like position and rotation and others, that can be found in the aframe inspector within the browser by
-      pressing ctrl+alt+i -->
-    <a-entity camera></a-entity>
+    <!--Adding the camera and allowing it to move it with wasd-->
+    <a-entity camera look-controls wasd-controls></a-entity>
 
   </a-scene>
 
