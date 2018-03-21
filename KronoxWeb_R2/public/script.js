@@ -119,8 +119,32 @@ function red13() {
         red13.style.display = 'inline'
   }
 
+  var redNI = document.getElementById('NIred');
+  var greenNI = document.getElementById('NIgreen');
+  var redGA = document.getElementById('GAred');
+  var greenGA = document.getElementById('GAgreen');
 
-
+  function redBuild() {
+    if(greenNI.style.display == 'inline' || redNI.style.display == 'inline')
+       redNI.style.display = 'none';
+    else
+       greenNI.style.display = 'none';
+       redNI.style.display = 'inline';
+  }
+function redGA() {
+  if(greenGA.style.display == 'inline')
+     redGA.style.display = 'none';
+  else
+        greenGA.style.display = 'none';
+        redGA.style.display = 'inline'
+  }
+  function greenBuild() {
+    if(greenNI.style.display == 'inline' || redNI.style.display == 'inline')
+       greenNI.style.display = 'inline';
+    else
+       greenNI.style.display = 'inline';
+       redNI.style.display = 'none';
+  }
 
 
 function ready() {
