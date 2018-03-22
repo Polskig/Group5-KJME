@@ -6,8 +6,9 @@ board.on("ready", function() {
   // Fade an LED out, and the complete callback will start
   // fading the next LED in sequence out, and so on.
   // If randomFade is true, then fading will happen in random
+  // order instead of sequentially.
   var leds = new five.Leds([11, 10, 9, 6, 5, 3]);
-  var timing = 250;
+  var timing = 1000;
   var randomFade = false;
   var fadeIndex = 0;
   var ledCount = leds.length;
