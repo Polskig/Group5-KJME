@@ -1,9 +1,7 @@
 var socket = null;
-var postresult = "5 minutes until booking runs out";
 
 if (document.readyState != 'loading') ready();
 else document.addEventListener('DOMContentLoaded', ready);
-
 
 function ready() {
 	const url = 'ws://' + location.host + '/ws';
@@ -12,7 +10,6 @@ function ready() {
 	socket.onmessage = function(evt) {
 		logReceived(evt.data);
   };
-    /* eeka said you can send smth here */
 }
 
 function send(str) {
@@ -20,12 +17,12 @@ function send(str) {
 }
 
 function logReceived(d) {
-    console.log('meddelande: ', d);
+    console.log('message: ', d);
 }
 
 /* Write your own functions down here, result of sent data */
 
-function displayDiv() {
-    document.getElementById("results").innerHTML= postresult;
+function displayDiv(postResult) {
+    document.getElementById("results").innerHTML= postResult;
     document.getElementById("results").style.background = "green";
 }

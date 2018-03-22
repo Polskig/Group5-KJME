@@ -1,9 +1,47 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 .wrapper {
-  border: 1px solid red;
   height: 1000px;
   width: 100%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .light-indicator {
   border: 1px solid blue;
+}
+
+input {
+  border: 1 px solid black;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  height: 35px;
+  width: 100px;
+  margin: 0 40px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.connectButtonOn {
+  background-color: green;
+}
+
+.connectButtonOff {
+  background-color: red;
+}
+
+.connectButtonFade {
+  background-color: orange;
+}
+
+#results {
+  background: green;
+  margin: 30px 0;
+  height: 50px;
+  color: white;
+  text-align: center;
+  padding: 25px 0 0 0;
+  border-radius: 4px;
 }

@@ -4,20 +4,20 @@
   <meta charset="utf-8" />
   <title></title>
   <link href="style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Quicksand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 </head>
 <body>
-  <h1>Turn on pot on & off</h1>
+    <div class="wrapper">
+        <h2>Book room, Cancel booking, and book the next time </h2>
+        <input class="connectButtonOn" type="submit" value="ON"  onclick="send('on'); displayDiv('Room booked');">
+        <input class='connectButtonOff' type='submit' value='OFF' onClick="send('off'); displayDiv('Booking cancelled');">
+        <input class='connectButtonFade' type='submit' value='FADE' onClick="send('fade'); displayDiv('5 minutes until booking runs out');">
 
-    <input class="connectButtonOn" type="submit" value="ON"  onclick="send('on'); displayDiv();">
-    <input class='connectButtonOff' type='submit' value='OFF' onClick="send('off'); displayDiv();">
-    <input class='connectButtonFade' type='submit' value='FADE' onClick="send('fade'); displayDiv();">
-
-  <div id="results">
-      Waiting for response..
-  </div>
-
+        <div id="results">
+            Waiting for response..
+        </div>
+    </div>
   <script src="lib/reconnecting-websocket.js"></script>
   <script src="script.js"></script>
   

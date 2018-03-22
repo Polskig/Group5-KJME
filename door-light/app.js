@@ -29,7 +29,7 @@ app.ws('/ws', function (ws, req) {
         fade();
         break;
       default:
-        console.log('något har gått fel');
+        console.log('switch case defaulted');
         break;
     }
 
@@ -41,19 +41,18 @@ app.ws('/ws', function (ws, req) {
 });
 
 let blink = function() {
-  const led = new five.Led(10);
+  const led = new five.Leds([11, 10, 9, 6, 5, 3]);
   led.on();
 };
 
 let stop = function() {
-  const led = new five.Led(10);
+  const led = new five.Leds([11, 10, 9, 6, 5, 3]);
   led.off();
 };
 
 let fade = function() {
-  var leds = new five.Leds([11, 10, 9, 6, 5, 3]);
-  var timing = 250;
-  var randomFade = false;
+  const leds = new five.Leds([11, 10, 9, 6, 5, 3]);
+  const timing = 1000;
   var fadeIndex = 0;
   var ledCount = leds.length;
 
