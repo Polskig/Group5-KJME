@@ -1,16 +1,16 @@
-# websockets skeleton
+# Vibrations
 
-This is a skeleton websocket example. It consists of a "server" script (app.js) that runs in the Node.js environment, and typical "client" code in the public/ folder.
+This code show 
 
-The example shows how to send a message from a client and have this distributed to every other client connected to the same server.
+Link to vibration api: (https://googlechrome.github.io/samples/vibration/). Download the folder and install the npm to it. 
 
-A hosted version of this is on [Glitch for you to fork and modify](https://glitch.com/edit/#!/ch-websockets-skeleton)
+How the setup for these two variation of codes that uses npm will be shown in the folders.
 
 # Setup 
 
 In the directory you've got this sample:
 
-`$ npm install`
+`$ npm install` or `$ npm install --save reconnecting-websocket`
 
 This will install the necessary packages from npm.
 
@@ -20,13 +20,6 @@ Once set up, you can boot up your server with
 
 `$ npm start`
 
-It will continue running. To stop it again, press CTRL+C (PC) or CMD+C (Mac).
-
 # Uses
 
 * [reconnecting-websocket](https://github.com/pladaria/reconnecting-websocket) wrapper (v3.2.2)
-
-# Read more
-
-* [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
-* [express-ws](https://www.npmjs.com/package/express-ws)
