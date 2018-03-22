@@ -4,12 +4,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expressWs = require('express-ws');
-var five = require("johnny-five");
+var five = require('johnny-five');
 
 var ews = expressWs(express());
 var app = ews.app;
-
-
 
 // Set up the '/ws' resource to handle web socket connections
 app.ws('/ws', function (ws, req) {
@@ -20,6 +18,21 @@ app.ws('/ws', function (ws, req) {
 
     console.log(new Date().toLocaleTimeString() + '> ' + msg);
 
+    switch(msg) {
+      case 'on':
+        blink();
+        break;
+      case 'off':
+        stop();
+        break;
+      case 'fade':
+        fade();
+        break;
+      default:
+        console.log('något har gått fel');
+        break;
+    }
+
     // Broadcast it to all other clients
     clients.forEach(c => {
       c.send(msg);
@@ -27,73 +40,40 @@ app.ws('/ws', function (ws, req) {
   });
 });
 
+let blink = function() {
+  const led = new five.Led(10);
+  led.on();
+};
 
-//A series of functions that will turn a led on and off from the browser
+let stop = function() {
+  const led = new five.Led(10);
+  led.off();
+};
 
-
-var five = require("johnny-five");
-var board = new five.Board();
-
-board.on("ready", function() {
-  // Set up the following PWM pins as LEDs.
-  // Fade an LED out, and the complete callback will start
-  // fading the next LED in sequence out, and so on.
-  // If randomFade is true, then fading will happen in random
-  // order instead of sequentially.
+let fade = function() {
   var leds = new five.Leds([11, 10, 9, 6, 5, 3]);
-  var timing = 1000;
+  var timing = 250;
   var randomFade = false;
   var fadeIndex = 0;
   var ledCount = leds.length;
-  var i;
 
   function fadeNext() {
     var candidateIndex = fadeIndex;
     leds[fadeIndex].fadeIn(timing);
-
-    // Determine the next LED to fade
-    if (randomFade) {
-      while (candidateIndex === fadeIndex) {
-        candidateIndex = Math.round(Math.random() * (ledCount - 1));
-      }
-    } else {
-      candidateIndex = (fadeIndex < ledCount - 1) ? fadeIndex + 1 : 0;
-    }
+    
+    candidateIndex = (fadeIndex < ledCount - 1) ? fadeIndex + 1 : 0;
+    
     fadeIndex = candidateIndex;
 
     leds[fadeIndex].fadeOut(timing, fadeNext);
   }
 
-});
+  leds.on();
+  leds[fadeIndex].fadeOut(timing, fadeNext);
+};
 
-
-  //Starts the robot when live server is started
-
-
-
-//recieves a message from the browser and if text matches, triggers a function in the robot
-app.ws('/ws', function (ws, req) {
-  ws.on('message', function (msg) {
-  
-
-	
-// A series of if statements waiting for browser to make a request
-  if(msg =="lamp"){
-    console.log("heha");
-  board.fadeNext();
-  }	
-    
-
-    var clients = ews.getWss('/ws').clients;
-    // Debug print it
-
-    console.log(new Date().toLocaleTimeString() + '> ' + msg);
-
-    // Broadcast it to all other clients
-    clients.forEach(c => {
-      c.send(msg);
-    });
-  });
+five.Board().on('ready', function() {
+  console.log('Arduino is ready.');
 });
 
 //var expressWs = require('express-ws')(app);
