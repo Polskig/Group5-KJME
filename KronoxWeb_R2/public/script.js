@@ -179,6 +179,10 @@ function ready() {
 
 }
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 07e62ab0673e7eeb140cf5b67e453e64dfe7fc00
 
 function send(str) {
   console.log(new Date().toLocaleTimeString() +  '> ' + str);

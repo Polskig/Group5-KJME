@@ -1,20 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <link href="styles.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Quicksand" rel="stylesheet">
 
-    <head>
-        <meta charset="utf-8"/>
-        <title>Cross-device test Marri</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Testing out this door thingy</h1>
-        
-        <div class="wrapper">
-            <div class="light-indicator">
-                
-            </div>
-        </div>
+</head>
+<body>
+  <h1>Turn on pot on & off</h1>
+  
+  
+  <div class="grow">
+    <input class ="connectButton"type="submit" value="ON"  onclick="send('lamp'); displayDiv();">
+  </div>
+  
+  <div class ="grow">
+    <input class ="connectButton"type="submit" value="OFF"  onclick="send('lamp2'); displayDiv1();">
+  </div>
+  <div id="results">
+      Waiting for response..
+  </div>
 
-    </body>
 
+  <script src="lib/reconnecting-websocket.js"></script>
+  <script src="script.js"></script>
+  
+</body>
 </html>
