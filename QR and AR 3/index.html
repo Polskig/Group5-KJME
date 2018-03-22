@@ -1,0 +1,103 @@
+<!doctype HTML>
+
+<!--This prototype creates an Augmented Reality overlay that's supposed to represent the QR code feature in the 
+Kronox booking system and add the information that people have said they would like to have displayed-->
+<html>
+<head>
+
+  <!--Required Libraries-->
+  <script src="/QR and AR 1/build/aframe.js"></script>
+  <script src="/QR and AR 1/build/aframe-ar.js"></script>
+  <!--Enables opacity functionality with objects-->
+  <script src="/QR and AR 1/src/model-opacity.js"></script>
+  <!--Hiding the default debug UI-->
+  <link href="/QR and AR 1/src/DebugUI-remover.css" rel="stylesheet">
+</head>
+
+<!--Defining the body-->
+<body style='margin : 0px; overflow: hidden;'>
+
+  <!--Creating a scene needed to project entities. 
+    The scene can be given attributes. Here we have added the height, width and turned on anti-aliasing-->
+  <a-scene embedded artoolkit='sourceType: webcam; sourceWidth: 240; sourceHeight: 180;' antialias="true" outline> 
+
+    <!--Adding the marker-->
+    <a-marker type='pattern' url='/QR and AR 1/Lib//markers/2.patt'>
+
+      <!--Here we add the object and define some simple attributes-->
+    <a-entity id="marker2" material="color: #273455" obj-model="obj: url(/QR and AR 1/Lib/images/background.obj)" rotation="0 0 0" position="0 -1.1 0" scale="0.4 0.4 0.4" opacity="1"></a-entity>
+    <a-entity id="marker2" material="color: #72BA3A" obj-model="obj: url(/QR and AR 1/Lib/images/background.obj)" rotation="0 0 0" position="0 -1.5 0" scale="0.5 0.5 0.5" opacity="1">¨
+      <a-animation attribute="model-opacity"
+        dur="3700"
+        from="1"
+        to="0"
+        repeat="indefinite"></a-animation>
+    </a-entity>    
+        <!--Adding text and giving attributes-->
+        <a-text position="-0.9 -0.7 -2.2" rotation="-90 0 0" color="yellow" scale="1.5 1.5 1.5"
+        value="OR:B129"></a-text>
+        <a-text position="-1.8 -0.7 -1.6" rotation="-90 0 0" 
+        value="Booking times"></a-text>
+        <a-text position="-1.8 -0.7 -1" rotation="-90 0 0" color="red"
+        value="14:00 - 15:00
+        15:00 - 16:00
+        16:00 - 17:00"></a-text>
+        <a-text position="1 -0.7 -1" rotation="-90 0 0" color="#72BA3A"
+        value="Book
+        Book
+        Book"></a-text>
+        <a-text position="-1.8 -0.7 1.3" rotation="-90 0 0" 
+        value="Other available rooms nearby"></a-text>
+        <a-text position="-1.8 -0.7 1.8" rotation="-90 0 0" color="yellow"
+        value="OR:B236
+        OR:B242"></a-text>
+        <a-text position="1 -0.7 1.8" rotation="-90 0 0" color="#72BA3A"
+        value="Book
+        Book"></a-text>
+        <!--<a-text position="-0.9 -0.7 -2" rotation="-90 0 0" color="#72BA3A" scale="1.2 1.2 1.2"
+        value="AVAILABLE"></a-text>-->
+        
+    </a-marker>
+
+    <a-marker type='pattern' url='/QR and AR 1/Lib//markers/10.patt'>
+
+        <!--Here we add the object and define some simple attributes-->
+      <a-entity id="marker2" material="color: #273455" obj-model="obj: url(/QR and AR 1/Lib/images/background.obj)" rotation="0 0 0" position="0 -1.1 0" scale="0.4 0.4 0.4" opacity="1"></a-entity>
+      <a-entity id="marker2" material="color: red" obj-model="obj: url(/QR and AR 1/Lib/images/background.obj)" rotation="0 0 0" position="0 -1.5 0" scale="0.5 0.5 0.5" opacity="1">¨
+        <a-animation attribute="model-opacity"
+          dur="3700"
+          from="1"
+          to="0"
+          repeat="indefinite"></a-animation>
+      </a-entity>    
+          <!--Adding text and giving attributes-->
+          <a-text position="-0.9 -0.7 -2.2" rotation="-90 0 0" color="yellow" scale="1.5 1.5 1.5"
+          value="OR:B129"></a-text>
+          <a-text position="-1.8 -0.7 -1.6" rotation="-90 0 0" 
+          value="Next booking slots"></a-text>
+          <a-text position="-1.8 -0.7 -1" rotation="-90 0 0" color="red"
+          value="15:00 - 16:00
+          16:00 - 17:00"></a-text>
+          <a-text position="1 -0.7 -1" rotation="-90 0 0" color="#72BA3A"
+          value="Book
+          Book"></a-text>
+          <a-text position="-1.8 -0.7 1.3" rotation="-90 0 0" 
+          value="Other available rooms nearby"></a-text>
+          <a-text position="-1.8 -0.7 1.8" rotation="-90 0 0" color="yellow"
+          value="OR:B236
+          OR:B242"></a-text>
+          <a-text position="1 -0.7 1.8" rotation="-90 0 0" color="#72BA3A"
+          value="Book
+          Book"></a-text>
+          <!--<a-text position="-0.9 -0.7 -2" rotation="-90 0 0" color="#72BA3A" scale="1.2 1.2 1.2"
+          value="AVAILABLE"></a-text>-->
+          
+      </a-marker>
+    <!--Adding the camera and allowing it to move it with wasd-->
+    <a-entity camera look-controls wasd-controls></a-entity>
+
+  </a-scene>
+
+</body>
+
+</html>

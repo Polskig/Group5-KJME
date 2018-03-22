@@ -27,22 +27,22 @@
 
 
     <div id="location" align="left">
-    <button type="button" class="btn btn-green">Niagara</button>
+    <button type="button" id="NIgreen" class="btn btn-green">Niagara</button><button type="button" id="NIred" class="btn btn-red">Niagara</button>
     <button type="button" class="btn btn-red">Orkanen</button>
     <button type="button" class="btn btn-red">Health and Society</button>
     <button type="button" class="btn btn-red">Odontology</button>
-    <button type="button" class="btn btn-green">Gäddan 8</button>
+    <button type="button" id="GAgreen"class="btn btn-green">Gäddan 8</button><button type="button" id="GAred"class="btn btn-green">Gäddan 8</button>
     <button type="button" class="btn btn-red">Orkanen Library</button>
     </div>
 
     <div id="timeButtons">
     <div align="right">
     <div id="niagaraTime">
-    <button type="button" class="btn btn-timered" onclick="NI8()">8:15-10:00</button>
-    <button type="button" class="btn btn-timered"  onclick="NI10()">10:15-12:00</button>
-    <button type="button" id="NI13" class="btn btn-timegreen" onclick="NI13()">13:15-15:00</button>    <button type="button" id="NI13r" class="btn btn-timered">13:15-15:00</button>
-    <button type="button" class="btn btn-timered" onclick="NI15()">15:15-17:00</button>
-    <button type="button" class="btn btn-timered" onclick="NI17()">17:15-20:00</button>
+    <button type="button" class="btn btn-timered" onclick="NI8(); redBuild(); redGA();">8:15-10:00</button>
+    <button type="button" class="btn btn-timered"  onclick="NI10(); redBuild(); redGA();">10:15-12:00</button>
+    <button type="button" id="NI13" class="btn btn-timegreen" onclick="NI13(); greenBuild();">13:15-15:00</button>    <button type="button" id="NI13r" class="btn btn-timered">13:15-15:00</button>
+    <button type="button" class="btn btn-timered" onclick="NI15(); redBuild(); redGA();">15:15-17:00</button>
+    <button type="button" class="btn btn-timered" onclick="NI17(); redBuild(); redGA();">17:15-20:00</button>
     </div>
     </div>
     </div>
