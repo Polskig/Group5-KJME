@@ -30,4 +30,4 @@ Run ngrok
 
 # Notes
 
-While the idea is that the user will be able to toggle both buildings and times to see what is available, in this version one can only toggle times within the building Niagara.
+While the idea is that the user will be able to toggle both buildings and times to see what is available, in this version one can only toggle times - schedules for one building (Niagara) are displayed (with the other buidlings being shown as fully booked).
