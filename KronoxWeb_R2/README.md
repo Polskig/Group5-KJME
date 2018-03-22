@@ -16,7 +16,9 @@ Boot server
 
 `$ npm start`
 
-# Ngrok
+Run the local file
+
+# OR use Ngrok
 
 Install ngrok
 
