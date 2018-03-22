@@ -1,6 +1,6 @@
 # Vibrations
 
-This code show 
+This code shows how to control different vibration pattern from the computer to the phone when you press a certain button.
 
 Link to vibration api: (https://googlechrome.github.io/samples/vibration/). Download the folder and install the npm to it. 
 
