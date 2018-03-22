@@ -179,10 +179,7 @@ function ready() {
 
 }
 
-function sendObject(o) {
-  // Create a string version of the object
-  send(JSON.stringify(o));
-}
+
 
 function send(str) {
   console.log(new Date().toLocaleTimeString() +  '> ' + str);
