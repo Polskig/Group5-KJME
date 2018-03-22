@@ -20,6 +20,12 @@ Once set up, you can boot up your server with
 
 `$ npm start`
 
+# After it start running
+
+Take the portnumber and add it to the IPadress of your computer usally the IPv4 and open it on the phone with that webadress
+
+Before you make the phone react to the button clicking on the computer you need to just touch the phone once so it gets conected/awake.
+
 # Uses
 
 * [reconnecting-websocket](https://github.com/pladaria/reconnecting-websocket) wrapper (v3.2.2)
