@@ -12,6 +12,10 @@ Door-light - Marjana
 
 QR and AR 1, QR and AR 2 and QR and AR 3 - Jonas
 
+# Reports
+
+You can find everyones report in the Report folder
+
 # Libaries
 
 The libaries that has been used in this project are:
@@ -19,4 +23,3 @@ The libaries that has been used in this project are:
 Johnny-five: (http://johnny-five.io/)
 
 Reconnecting-websocket: (https://github.com/pladaria/reconnecting-websocket)
-
