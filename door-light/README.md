@@ -27,8 +27,6 @@ If the requirements above are met, you simply type:
 npm install -g node-gyp
 Into the selected file
 
-Afterwards, type:
-mkdir nodebot && cd nodebot;
 
 and most importantly:
 npm install johnny-five
@@ -41,16 +39,16 @@ Firmata is a required library that should be pre-installed but sometimes it isn'
 Check your board by going to Arduino.cc > Libraries > Firmata.
 Upload the Firmata code to your board through the online editor.
 
-### HELLO, WORLD! ###
+### HELLO, WORLD!  Installation for Johnny five ###
 
-After installing this great thing, the magic happens in the strobe.js. If you've installed the required modules in the correct file, the demo should be ready to go.
+After installing this great thing, the magic happens in the selected file you've put your code in, meaning:
 
-The strobe.js file I mentioned above is a file where you write your script to the board. You need to create it yourself!
+If you've installed the required modules in the correct file (npm install) (first level) and in public (npm install johnny-five), the demo should be ready to go.
 
-Create a js file and name it strobe.js. It should be located at first level directly in the file.
+The code for this project is written in app.js. In terminal, please navigate to the public folder.
 
  Make sure the board is plugged into your host machine. Now, in your terminal, type or paste the following:
 
- node strobe.js 
+ node app.js
 
  You'll get feedback through the terminal, and on the webpage you should be able to try it with some cross device websocketin'!.

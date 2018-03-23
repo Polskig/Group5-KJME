@@ -9,11 +9,13 @@
 </head>
 <body>
     <div class="wrapper">
+        
         <h2>Book room, Cancel booking, and book the next time </h2>
         <input class="connectButtonOn" type="submit" value="ON"  onclick="send('on'); displayDiv('Room booked');">
         <input class='connectButtonOff' type='submit' value='OFF' onClick="send('off'); displayDiv('Booking cancelled');">
         <input class='connectButtonFade' type='submit' value='FADE' onClick="send('fade'); displayDiv('5 minutes until booking runs out');">
 
+        <!-- Feedback from pressed button -->
         <div id="results">
             Waiting for response..
         </div>

@@ -1,26 +1,28 @@
-var express = require('express');
-var path = require('path');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var expressWs = require('express-ws');
-var five = require('johnny-five');
+const express = require('express');
+const path = require('path');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const expressWs = require('express-ws');
+const five = require('johnny-five');
 
-var ews = expressWs(express());
-var app = ews.app;
+const ews = expressWs(express());
+const app = ews.app;
 
-// Set up the '/ws' resource to handle web socket connections
+/* Declaring global variable (6 pins) */
+let ledArray;
+
 app.ws('/ws', function (ws, req) {
-  // A message has been received from a client
   ws.on('message', function (msg) {
-    var clients = ews.getWss('/ws').clients;
-    // Debug print it
+    const clients = ews.getWss('/ws').clients;
 
     console.log(new Date().toLocaleTimeString() + '> ' + msg);
 
+    /* Switch case for msg, calls method depending on value of message */
+    /* To save code and time :) */
     switch(msg) {
       case 'on':
-        blink();
+        start();
         break;
       case 'off':
         stop();
@@ -33,55 +35,53 @@ app.ws('/ws', function (ws, req) {
         break;
     }
 
-    // Broadcast it to all other clients
     clients.forEach(c => {
       c.send(msg);
     });
   });
 });
 
-let blink = function() {
-  const led = new five.Leds([11, 10, 9, 6, 5, 3]);
-  led.on();
+/* Functions for arduino, on, off, fade */
+let start = function() {
+  ledArray.on();
 };
 
 let stop = function() {
-  const led = new five.Leds([11, 10, 9, 6, 5, 3]);
-  led.off();
+  ledArray.off();
 };
 
 let fade = function() {
-  const leds = new five.Leds([11, 10, 9, 6, 5, 3]);
   const timing = 1000;
-  var fadeIndex = 0;
-  var ledCount = leds.length;
+  let fadeIndex = 0;
+  let ledCount = ledArray.length;
 
   function fadeNext() {
-    var candidateIndex = fadeIndex;
-    leds[fadeIndex].fadeIn(timing);
+    let candidateIndex = fadeIndex;
+    ledArray[fadeIndex].fadeIn(timing);
     
     candidateIndex = (fadeIndex < ledCount - 1) ? fadeIndex + 1 : 0;
     
     fadeIndex = candidateIndex;
 
-    leds[fadeIndex].fadeOut(timing, fadeNext);
+    // The method calls itself to continue with next lamp in the sequence 
+    ledArray[fadeIndex].fadeOut(timing, fadeNext);
   }
 
-  leds.on();
-  leds[fadeIndex].fadeOut(timing, fadeNext);
+  ledArray.on();
+  ledArray[fadeIndex].fadeOut(timing, fadeNext);
 };
 
 five.Board().on('ready', function() {
   console.log('Arduino is ready.');
+
+  // Declaring ledArray when board is ready
+  ledArray = new five.Leds([11, 10, 9, 6, 5, 3]);
 });
 
-//var expressWs = require('express-ws')(app);
 app.use(require('middleware-static-livereload')({
   documentRoot: 'public/'
 }));
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -90,14 +90,12 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// catch 404 and forward to error handler
 app.use(function (req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
 
-// error handler
 app.use(function (err, req, res, next) {
   if (err.status)
     res.sendStatus(err.status);

@@ -1,4 +1,4 @@
-var socket = null;
+let socket = null;
 
 if (document.readyState != 'loading') ready();
 else document.addEventListener('DOMContentLoaded', ready);
@@ -20,8 +20,7 @@ function logReceived(d) {
     console.log('message: ', d);
 }
 
-/* Write your own functions down here, result of sent data */
-
+/* Displays feedback for pressed button */
 function displayDiv(postResult) {
     document.getElementById("results").innerHTML= postResult;
     document.getElementById("results").style.background = "green";
