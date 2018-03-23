@@ -1,8 +1,10 @@
 # Shake and sound
 
-This codde was used in the begining before the vibration api was found.
+This code was used in the begining before the vibration api was found.
 
 # Vibrations
+
+The main vibration code is the Vibration Cross-device V2 to look at.
 
 In this folder there are different kind of vibrations codes. But there are two fodlers that uses the [reconnecting-websocket] that can be find here: (https://github.com/pladaria/reconnecting-websocket) wrapper (v3.2.2) And thoose folders are the Vibration Cross-device and Vibration Cross-device V2
 
