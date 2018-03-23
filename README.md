@@ -2,7 +2,7 @@
 
 Group 5 project with door 
 
-#Who did what
+# Who did what
 
 KronoxWebR1 and KronoxWeb_R2 - Erika
 
@@ -12,7 +12,7 @@ Door-light - Marjana
 
 QR and AR 1, QR and AR 2 and QR and AR 3 - Jonas
 
-#Libaries
+# Libaries
 
 The libaries that has been used in this project are:
 
