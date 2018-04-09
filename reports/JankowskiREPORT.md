@@ -1,4 +1,4 @@
-Jankowski, Kim
+# Jankowski, Kim
 
 We were the smallest group during this project with only four members. The time was dealt individually during the stages of coding and physical prototyping. But, whenever help was needed, the communication in the group was excellent in a sense that the collaboration between us members was unlimited.
 
