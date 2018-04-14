@@ -1,6 +1,6 @@
-##Drewling, Jonas
+Drewling, Jonas
 
-#Programming 2 Report
+Programming 2 Report
 
 My initial reaction was a genuin concern as to how programming could fit in with the fast-paced environment of prototyping.
 Our past experiences with prototyping had proved that it is a good idea to be able to produce prototypes quickly and efficiently 
