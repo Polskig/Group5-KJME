@@ -1,6 +1,6 @@
 ## Drewling, Jonas
 
-# Programming 2 Report
+## Programming 2 Report
 
 My initial reaction was a genuin concern as to how programming could fit in with the fast-paced environment of prototyping.
 Our past experiences with prototyping had proved that it is a good idea to be able to produce prototypes quickly and efficiently 
@@ -29,8 +29,7 @@ for our users and the scenario.
 Throughout the project it felt like we were making progress and increasing our effectiveness with techniques, that we were maybe already familiar with, 
 but by no means confident with. Sometimes it did feel like we were slowing ourselves down, or not achieving our goals quickly enough,
 due to the amount of time spent and weighing that up against what we actually gained from this time that we spent on a particular aspect of a prototype.
-One example of this would be when we were implementing web-sockets. It felt as though too much time spent to trying to figure out how to implement them, 
-but once we did implement them we could see the benefit of having the added layer of functionality they provided.
+One example of this would be when we were implementing web-sockets. It felt as though too much time spent to trying to figure out how to implement them, but once we did implement them we could see the benefit of having the added layer of functionality they provided.
 Picking wich elements of programming to use for which prototypes was a challenge and needed careful consideration, 
 which was important but not initially realized. This relates to all forms of prototyping and the concept of prototyping itself.
 Careful consideration of what to add and what to leave out, in order to produce a prototype that explores the right questions or concerns.
